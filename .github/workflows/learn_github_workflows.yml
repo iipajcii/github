@@ -8,3 +8,7 @@ jobs:
       - uses: actions/setup-node@v1
       - run: npm install -g bats
       - run: bats -v
+      - run: >
+        echo "running jobs";
+        echo "real";
+        touch bingo;
