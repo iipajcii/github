@@ -7,9 +7,9 @@ jobs:
       - name: Step 1
         uses: actions/setup-node@v1
       - name: Step 2
-        run: npm install -g bats
-        run: bats -v
         run: >
+          npm install -g bats
+          bats -v
           echo "running jobs";
           echo "real";
           touch bingo;
