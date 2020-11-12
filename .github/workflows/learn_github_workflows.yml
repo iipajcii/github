@@ -4,14 +4,16 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v1
-      - run: npm install -g bats
-      - run: bats -v
-      - run: >
+      - name: Step 1
+        uses: actions/setup-node@v1
+        run: npm install -g bats
+        run: bats -v
+        run: >
           echo "running jobs";
           echo "real";
           touch bingo;
-      - uses: actions/upload-artifact@v2
-    with:
-      name: hello_file
-      path: ./hello.txt
+      - name: Step 2
+        uses: actions/upload-artifact@v2
+        with:
+          name: hello_file
+          path: ./hello.txt
