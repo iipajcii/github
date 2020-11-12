@@ -12,6 +12,6 @@ jobs:
           echo "real";
           touch bingo;
       - uses: actions/upload-artifact@v2
-	   with:
-	     name: hello_file
-		path: ./hello.txt
+    with:
+      name: hello_file
+      path: ./hello.txt
